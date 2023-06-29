@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    background-color: var(--Off-white);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    width: 100%;
+}
+.top-container button {
+    display:none;
+}
+.mobile {
+    display: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Off-white);
+    padding: 5%;
+}
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+.top-container .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.top-container .menu p {
+    cursor: pointer;
+}
+.top-container .menu p:hover{
+    color: var(--Soft-red);
+}
+.middle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.right-middle {
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 28%;
+    gap: 2rem;
+}
+.right-middle .top, .right-middle .middle, .right-middle .bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.right-middle h1 {
+    color: var(--Soft-orange);
+    font-size: 2.3rem;
+    padding-bottom: 0.8rem;
+}
+.right-middle h2 {
+    color: var(--Off-white);
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.right-middle h2:hover {
+    color: var(--Soft-orange);
+}
+.right-middle p {
+    color: var(--Off-white);
+    opacity: 0.6;
+}
+.left-middle {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.left-middle .text {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.left-middle h1 {
+    font-size: 3.7rem;
+    font-weight: 800;
+    line-height: 3.5rem;
+}
+.left-middle .left {
+    width: 90%;
+}
+.left-middle .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.5rem 0 0;
+    width: 90%;
+}
+.left-middle .right p {
+    font-size: 1rem;
+}
+.left-middle button {
+    text-transform: uppercase;
+    background-color: var(--Soft-red);
+    letter-spacing: 5px;
+    font-family: 'Inter', sans-serif;
+    color: var(--Off-white);
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 50%;
+    cursor: pointer;
+    font-weight: 800;
+}
+.left-middle button:hover {
+    background-color: var(--Very-dark-blue);
+}
+hr {
+    margin-top: 10px;
+    opacity: 0.3;
+}
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4rem;
+    gap: 6.6rem;
+}
+.new {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+    width: 30%;
+    min-height: 100%;
+}
+
+.new .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.pc, .laptop, .game {
+    min-height: 145px;
+    min-width: 120px;
+}
+.new h1 {
+    font: 2.3rem;
+    color:var(--Grayish-blue)
+}
+.new h2 {
+    font-size: 1rem;
+    cursor: pointer;
+}
+.new h2:hover{
+    color: var(--Soft-red);
+}
+@media screen and (max-width:600px){
+    .container {
+        padding: 1rem;
+        position: relative;
+        width: 100%;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inherit;
+        width: 100%;
+    }
+    .middle-container {
+        flex-direction: column;
+    }
+    .bottom-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .right-middle {
+        width: 100%;
+    }
+    .left-middle {
+        width: 100%;
+    }
+    .left-middle .text {
+        flex-direction: column;
+    }
+    .new {
+        width: 100%;
+    }
+    .left-middle .left {
+        width: 100%;
+    }
+    .logo button {
+        position: absolute;
+        right: 5%;
+        top: 1%;
+    }
+    .pc, .laptop, .game {
+        width: 100px;
+        height: 100%;
+    }
+    .top-container .menu {
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--Off-white);
+        right: 0;
+        top: 0;
+        padding: 1.5rem;
+        width: 50%;
+        min-height: 100%;
+        gap: 2rem;
+        display: none;
+        box-shadow: -200px 0px 0px 102px rgba(0,0,0,0.46);
+    }
+    .menu button {
+        align-self: flex-end;
+        margin-bottom: 3rem;
+    }
+    .top-container button {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        display: inherit;
+    }
+}   
